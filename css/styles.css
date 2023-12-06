@@ -1,0 +1,96 @@
+body {
+    background-color: #000; 
+    color: #ffcc00; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.clock-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-analog {
+    background-image: url("/img/reloj.png");
+    width: 400px;
+    height: 400px;
+    border: 2px solid #ffcc00; 
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 10px 5px #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffcc00;
+    border-radius: 50vh;
+     z-index: 100;
+
+    
+}
+
+
+.hour-hand{
+    width: 140px;
+    height: 140px;
+}
+.minute-hand{
+    width: 220px;
+    height: 220px;
+}
+.second-hand{
+    width: 250px;
+    height: 250px;
+}
+.hour-hand::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 93px;
+    z-index: 10;
+    background-color: #ffcc00;
+    border-radius: 50vh;
+}
+.minute-hand::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 130px;
+    z-index: 11;
+    border-radius: 50vh;
+    background-color: #ffcc00;
+}
+.second-hand::before{
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    z-index: 12;
+    border-radius: 50vh;
+    background-color: #ffcc00;
+}
+.hour-hand, .minute-hand, .second-hand{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+  
+}
+
+.clock-digital {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    
+}
